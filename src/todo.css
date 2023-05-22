@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  /* primary */
+  --brightBlue: hsl(220, 98%, 61%);
+  --checkBackground: hsl(192, 100%, 67%), hsl(280, 87%, 65%);
+
+  /* light theme */
+  --veryLightGray: hsl(0, 0%, 98%);
+  --veryLightGrayishBlue: hsl(236, 33%, 92%);
+  --lightGrayishBlue: hsl(233, 11%, 84%);
+  --darkGrayishBlue: hsl(236, 9%, 61%);
+  --veryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+  /* dark theme */
+  --veryDarkBlue: hsl(235, 21%, 11%);
+  --veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --lightGrayishBlue: hsl(234, 39%, 85%);
+  --lightGrayishBlueHover: hsl(236, 33%, 92%);
+  --darkGrayishBlue: hsl(234, 11%, 52%);
+  --veryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --veryDarkGrayishBlueHover: hsl(237, 14%, 26%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: xx-large;
+  letter-spacing: 7px;
+  color: white;
+  font-weight: 400;
+}
+
+.DarkMood {
+  transition: 0.5s ease-in-out;
+  background-color: var(--veryDarkBlue);
+  color: var(--lightGrayishBlue);
+  min-height: 100vh;
+}
+
+.DarkMood form,
+.DarkMood .listItem,
+.DarkMood .filterButtonsDesktop,
+.DarkMood .filterButtons {
+  background-color: var(--veryDarkDesaturatedBlue);
+}
+.DarkMood .listItem{
+    border-bottom: 1px solid var(--veryDarkGrayishBlue);
+}
+
+.DarkMood form input,
+.DarkMood form button {
+  color: var(--lightGrayishBlue);
+}
+.DarkMood ul,
+.DarkMood .filterButtonsDesktop,
+.DarkMood .filterButtons {
+  box-shadow: 2px 3px 6px var(--veryDarkBlue);
+}
+
+.DarkMood .filterButtons span,
+.DarkMood .filterButtonsDesktop span,
+.DarkMood .filterButtonsDesktop p {
+  color: var(--darkGrayishBlue);
+}
+
+.DarkMood .filterButtons span:hover,
+.DarkMood .filterButtonsDesktop span:hover {
+  color: var(--lightGrayishBlue);
+}
+
+.DarkMood .filterButtons span:active,
+.DarkMood .filterButtonsDesktop span:active {
+  color: var(--brightBlue);
+}
+
+/* light mood settings */
+.lightMood {
+  transition: 0.5s ease-in-out;
+  background-color: var(--veryDarkBlue);
+  color: var(--lightGrayishBlue);
+}
+
+.lightMood form,
+.lightMood .listItem,
+.lightMood .filterButtonsDesktop,
+.lightMood .filterButtons {
+  background-color: var(--veryLightGray);
+  color: var(--veryDarkGrayishBlue);
+}
+.lightMood form input,
+.lightMood form button {
+  color: var(--veryDarkGrayishBlue);
+}
+.lightMood ul,
+.lightMood .filterButtonsDesktop,
+.lightMood .filterButtons {
+  box-shadow: 2px 3px 6px var(--lightGrayishBlue);
+}
+
+.lightMood .filterButtons span,
+.lightMood .filterButtonsDesktop span,
+.lightMood .filterButtonsDesktop p {
+  color: var(--lightGrayishBlue);
+}
+
+.lightMood .filterButtons span:hover,
+.lightMood .filterButtonsDesktop span:hover {
+  color: var(--veryDarkGrayishBlue);
+}
+
+.lightMood .filterButtons span:active,
+.lightMood .filterButtonsDesktop span:active {
+  color: var(--brightBlue);
+}
+
+.card {
+  background-color: white;
+  padding: 5px;
+}
+
+/* Background image */
+.bg-img {
+  display: grid;
+  width: 100%;
+}
+.bg-img > * {
+  grid-row: 1 / -1;
+  grid-column: 1/ -1;
+}
+.bgContent {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+.bg-img picture img {
+  width: 100%;
+  height: 100%;
+}
+
+/* toggle img */
+.hidden {
+  display: none;
+}
+.show {
+  animation: slide 0.5s linear;
+  position: relative;
+  display: block;
+}
+.bgIcon {
+  display: flex;
+}
+
+@keyframes slide {
+  0% {
+    left: 50px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+/* the form and list overlap */
+.section-overlap {
+  width: 100%;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* form input */
+form {
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+form input {
+  padding: 20px;
+  flex-basis: 100%;
+  border: none;
+  outline: none;
+  margin: 0 0 0 40px;
+  background-color: transparent;
+}
+
+form .checkmarkDisable {
+    position: absolute;
+    top: 12px;
+    left: 3%;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--lightGrayishBlue);
+  }
+
+form button {
+  flex-basis: auto;
+  display: inline-flex;
+  justify-content: center;
+  padding: 20px;
+  margin-right: 5px;
+  background-color: transparent;
+  border: none;
+  /* color: var(--brightBlue); */
+}
+
+/* listItem container */
+ul {
+  box-shadow: 2px 3px 6px var(--lightGrayishBlueHover);
+  margin: 25px auto 0 auto;
+  padding: 0;
+  width: 85%;
+  list-style-type: none;
+  border-radius: 5px 5px 0 0;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(var(--checkBackground));
+  border-radius: 6px;
+}
+
+/* listItems */
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  cursor: move;
+  border-bottom: 1px solid var(--lightGrayishBlue);
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid var(--lightGrayishBlue);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-image: linear-gradient(var(--checkBackground));
+}
+
+/* When the checkbox is checked, add a line through the text */
+.container input:checked ~ .lineThrough {
+  text-decoration: line-through;
+  color: var(--darkGrayishBlue);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* delete item */
+.deleteItem {
+  font-size: 19px;
+  padding: 5px;
+}
+
+/* filter buttons */
+.filterButtonsDesktop {
+  display: flex;
+  width: 85%;
+  margin: 1px auto;
+  box-shadow: 2px 3px 6px var(--lightGrayishBlueHover);
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 0 0 5px 5px;
+}
+.filterButtonsDesktop span {
+  cursor: pointer;
+}
+
+.filterButtonsDesktop div {
+  display: none;
+}
+
+.filterButtons {
+  width: 85%;
+  box-shadow: 2px 3px 6px var(--lightGrayishBlueHover);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+  gap: 5%;
+  margin: 15px auto 0 auto;
+  padding: 20px;
+  cursor: pointer;
+}
+@media (min-width: 700px) {
+    .section-overlap {
+      width: 70%;
+      top: 170px;
+    }
+    .bgContent {
+      width: 55%;
+      margin: 0 auto;
+      height: 170px;
+    }
+    .bg-img picture{
+      height: 300px;
+    }
+    .filterButtonsDesktop div {
+      flex-basis: 44%;
+      display: flex;
+      justify-content: center;
+      gap: 10%;
+    }
+
+    .filterButtonsDesktop p, .clearCompleted, .filterButtonsDesktop div {
+      padding: 6px 0;
+    }
+
+
+    .filterButtons {
+      display: none;
+    }
+  }
+
+@media (min-width: 1200px) {
+  .section-overlap {
+    width: 40%;
+  }
+  .bgContent {
+    width: 35%;
+  }
+}
