@@ -2,7 +2,7 @@
 
 In the project directory, you can run:
 
-# Frontend Mentor - Room homepage solution
+# Frontend Mentor - Todo app solution
 
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -30,8 +30,9 @@ Bonus: Drag and drop to reorder items on the list
 
 ### Links
 
-- Solution URL: ()
-- Solution website: ()
+- Solution Github: (https://github.com/Joe-Praise/Todo_app)
+- Solution URL: (https://www.frontendmentor.io/solutions/todo-app-using-redux-nNI6YuoyHX)
+- Solution website: (https://joepraisetodoapp.netlify.app/)
 
 ### Built with
 
@@ -39,6 +40,7 @@ Bonus: Drag and drop to reorder items on the list
 - Flexbox
 - Mobile-first workflow
 - React js
+- Redux
 
 ### What I learned
 

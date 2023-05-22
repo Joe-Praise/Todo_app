@@ -11,7 +11,7 @@ const BackgroundImg = (props) => {
 
   return (
     <Fragment>
-      <div className="bg-img">
+      <section className="bg-img">
         {isDarkMood && 
         <picture>
             <source media="(min-width: 700px)" srcSet={darkDesktop} />
@@ -38,7 +38,7 @@ const BackgroundImg = (props) => {
             </figure>
           </div>
         </div>
-      </div>
+      </section>
     </Fragment>
   );
 };

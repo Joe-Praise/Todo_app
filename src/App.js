@@ -68,11 +68,11 @@ function App() {
 
   return (
     <main className={toggleState ? "DarkMood" : "lightMood"}>
+      
       <BackgroundImg onDark={toggleState} onToggle={toggleThemeHandler} />
       <section className="section-overlap">
         <Input onCreateTodo={createTodoHandler} />
         <List onUseTodo={output} onMoveToCompleted={showActiveTasks} />
-        {/* <TestList/> */}
         <Filters
           totalTask={filteredTask}
           onAll={showAllTasks}
